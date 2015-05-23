@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Open Cloud</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+	<link href="css/responsiveslides.css" rel="stylesheet">	
+	<link href="css/normalize.css" rel="stylesheet">
+	<link href="css/styles.css" rel="stylesheet" >	
+	<link href="css/responsive.css" rel="stylesheet" >
+	<link href="css/font-awesome.css" rel="stylesheet" >	
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,700' rel='stylesheet'>
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400italic,400,700' rel='stylesheet'>
+	<link rel="stylesheet" href="css/jquery.rs.carousel.css" media="all" />
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="js/responsiveslides.min.js"></script>	
+	<script src="js/jquery.ui.widget.js"></script>
+	<script src="js/jquery.rs.carousel.js"></script>
+	<script src="js/jquery.rs.carousel-continuous.js"></script>
+	
+	<script>
+	$(document).ready(function () {	
+		$(function () {
+			$("#main-slider").responsiveSlides({
+			auto: true,
+			nav: true,
+			speed: 400,
+			timeout: 2000,
+			pause: true,
+			prevText: "",
+			nextText: ""
+			});
+		});	
+		$('.rs-carousel').carousel({
+			itemsPerTransition: 1,
+			loop: true,
+			pagination: false,
+			speed: 'fast',
+			translate3d: false,
+			continuous: true,
+			touch: true,
+			insertPrevAction: function () { return $('<a href="#" class="rs-carousel-action rs-carousel-action-prev"></a>').appendTo('.reviews'); },
+			insertNextAction: function () { return $('<a href="#" class="rs-carousel-action rs-carousel-action-next"></a>').appendTo('.reviews'); }		
+		});		
+		$('.mob-menu-toggle').click(function() {
+			$('.mob-nav-menu').slideToggle(200,'swing');
+		});
+		$(window).resize(function(){
+			if ($(window).width() >= 768){	
+				$(".mob-nav-menu").hide();
+			}	
+		});
+	});
+	</script>
+</head>
+<body>
+	<header>
+		<div class="hline1">
+			<div class="content-wrap">
+				<div class="tel-num">
+					<a href="#">Support: +0123456789</a>
+				</div>
+				<div class="user-links">
+					<a href="#"><i class="fa fa-comments"></i> Sales Chat</a>
+					<a href="#"><i class="fa fa-lock"></i> Login</a>
+					<a href="#"><i class="fa fa-sign-in"></i> Sign Up</a>				
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div class="hline2">
+			<div class="content-wrap">
+				<a href="#" class="logo"></a>
+				<nav>
+					<ul class="nav-list">
+						<li><a href="#" class="active">Home</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Products</a></li>
+						<li><a href="#">Solutions</a></li>
+						<li><a href="#">Support</a></li>
+						<li><a href="#">Contact Us</a></li>
+					</ul>
+				</nav>
+				<div class="mob-menu-toggle">
+					<i class="fa fa-bars"></i>
+				</div>
+			</div>
+		</div>		
+	</header>
+	<ul class="mob-nav-menu">
+		<li class="mob-nav-item"><a href="#" class="mob-nav-active">Home</a></li>
+		<li class="mob-nav-item"><a href="#">About</a></li>
+		<li class="mob-nav-item"><a href="#">Products</a></li>
+		<li class="mob-nav-item"><a href="#">Solutions</a></li>
+		<li class="mob-nav-item"><a href="#">Support</a></li>
+		<li class="mob-nav-item"><a href="#">Contact Us</a></li>
+	</ul>
+	<div class="slider">
+		<ul class="rslides slider-wrap" id="main-slider">
+			<li class="slider-item">
+				<div class="slide-title">Get the Right Cloud for Your App.</div>
+				<div class="slide-features">
+					<div class="slide-feature-cont">
+						<div class="slide-feature"><i class="fa fa-chevron-right"></i> More than 12,3456 clients trust us</div>
+					</div>
+					<div class="slide-feature-cont">
+						<div class="slide-feature"><i class="fa fa-chevron-right"></i> 24/7 support</div>
+					</div>
+					<div class="slide-feature-cont">
+						<div class="slide-feature"><i class="fa fa-chevron-right"></i> Performance, reliability, security</div>
+					</div>
+					<div class="slide-feature-cont">
+						<div class="slide-feature"><i class="fa fa-chevron-right"></i> Flexible contracts</div>
+					</div>
+				</div>
+				<a href="#" class="btn bth-big btn-orange">See Features</a>
+			</li>
+			<li class="slider-item">
+				<div class="slide-title">Lorem ipsum dolor sit amet, consectetur</div>
+				<div class="slide-features">
+					<div class="slide-feature-cont">
+						<div class="slide-feature"><i class="fa fa-chevron-right"></i> Lorem ipsum dolor</div>
+					</div>
+					<div class="slide-feature-cont">
+						<div class="slide-feature"><i class="fa fa-chevron-right"></i> Consectetur adipiscing elit</div>
+					</div>
+					<div class="slide-feature-cont">
+						<div class="slide-feature"><i class="fa fa-chevron-right"></i> Morbi faucibus augue</div>
+					</div>
+					<div class="slide-feature-cont">
+						<div class="slide-feature"><i class="fa fa-chevron-right"></i> Est volutpat eleifend</div>
+					</div>
+				</div>
+				<a href="#" class="btn bth-big btn-orange">See Features</a>
+			</li>
+			<li class="slider-item">
+				<div class="slide-title">Morbi faucibus augue vitae est</div>
+				<div class="slide-features">
+					<div class="slide-feature-cont">
+						<div class="slide-feature"><i class="fa fa-chevron-right"></i> Suspendisse imperdiet</div>
+					</div>
+					<div class="slide-feature-cont">
+						<div class="slide-feature"><i class="fa fa-chevron-right"></i> Maecenas quis rutrum quam</div>
+					</div>
+					<div class="slide-feature-cont">
+						<div class="slide-feature"><i class="fa fa-chevron-right"></i> Accumsan at leo ut fringilla</div>
+					</div>
+					<div class="slide-feature-cont">
+						<div class="slide-feature"><i class="fa fa-chevron-right"></i> Vitae est volutpat eleifend</div>
+					</div>
+				</div>
+				<a href="#" class="btn bth-big btn-orange">See Features</a>
+			</li>
+		</ul>
+	</div>
+	<div class="content-wrap">
+		<div class="top-arrow-wrap">
+			<img src="img/top-arrow.png" class="top-arrow" alt="top arrow"/>
+		</div>
+		<div class="features float-row">
+			<div class="col-1-3 feature">
+				<a href="#" class="feature-pic feature-pic-1"></a>
+				<h2>Private Cloud</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi faucibus augue vitae est volutpat eleifend.</p>
+				<a href="#" class="btn bth-big btn-green">Read More</a>
+			</div>
+			<div class="col-1-3 feature">
+				<a href="#" class="feature-pic feature-pic-2"></a>
+				<h2>Dedicated Servers</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi faucibus augue vitae est volutpat eleifend.</p>
+				<a href="#" class="btn bth-big btn-green">Read More</a>
+			</div>
+			<div class="col-1-3 feature">
+				<a href="#" class="feature-pic feature-pic-3"></a>
+				<h2>Hybrid cloud</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi faucibus augue vitae est volutpat eleifend.</p>
+				<a href="#" class="btn bth-big btn-green">Read More</a>
+			</div>
+			<div class="clear"></div>
+		</div>		
+		<div class="highlight">
+			<div class="highlight-p1 fl-left">
+				<h2>24/7 Service & Support</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi faucibus augue vitae est volutpat eleifend.</p>
+			</div>
+			<a href="#" class="btn btn-orange bth-medium fl-right">Live Chat</a>
+			<div class="clear"></div>
+		</div>
+		<div class="prov-perf float-row">
+			<div class="col-1-2">
+				<h2>What We Provide</h2>
+				<ul class="provide-list">
+					<li><i class="fa fa-check"></i> Lorem ipsum dolor sit amet, consectetur adipiscing</li>
+					<li><i class="fa fa-check"></i> Cras bibendum ornare mauris porta aliquam</li>
+					<li><i class="fa fa-check"></i> Maecenas quis rutrum quam</li>
+					<li><i class="fa fa-check"></i> Suspendisse imperdiet sapien eu metus adipiscing</li>
+					<li><i class="fa fa-check"></i> Maecenas quis rutrum quam, ut vulputate quam.</li>
+					<li><i class="fa fa-check"></i> Mauris accumsan at leo ut fringilla. In bibendum varius nulla at ornare.</li>
+				</ul>
+			</div>
+			<div class="col-1-2">
+				<h2>Performance</h2>
+					<div class="stat-bar">
+						<div class="stat-value stat-value-1"></div>
+					</div>
+					<div class="stat-bar">
+						<div class="stat-value stat-value-2"></div>
+					</div>
+					<div class="stat-bar">
+						<div class="stat-value stat-value-3"></div>
+					</div>
+					<div class="stat-bar">
+						<div class="stat-value stat-value-4"></div>
+					</div>
+			</div>
+			<div class="clear"></div>
+		</div>		
+	</div>	
+	<div class="reviews-wrap">
+		<h2>What Our Clients are Saying</h2>
+		<div class="reviews">		
+			<div class="corner c-top-left"></div>
+			<div class="corner c-top-right"></div>
+			<div class="corner c-bottom-left"></div>
+			<div class="corner c-bottom-right"></div>					
+			<div class="rs-carousel content-wrap">
+				<ul>
+					<li class="review-item">
+						<div class="review-pic"></div>
+						<div class="review-name">Lorem Ipsum</div>
+						<div class="review-text">"Proin malesuada egestas nunc tristique aliquet."</div>
+					</li>
+					<li class="review-item">
+						<div class="review-pic"></div>
+						<div class="review-name">Lorem Ipsum</div>
+						<div class="review-text">"Proin malesuada egestas nunc tristique aliquet."</div>
+					</li>
+					<li class="review-item">
+						<div class="review-pic"></div>
+						<div class="review-name">Lorem Ipsum</div>
+						<div class="review-text">"Proin malesuada egestas nunc tristique aliquet."</div>
+					</li>
+					<li class="review-item">
+						<div class="review-pic"></div>
+						<div class="review-name">Lorem Ipsum</div>
+						<div class="review-text">"Proin malesuada egestas nunc tristique aliquet."</div>
+					</li>
+					<li class="review-item">
+						<div class="review-pic"></div>
+						<div class="review-name">Lorem Ipsum</div>
+						<div class="review-text">"Proin malesuada egestas nunc tristique aliquet."</div>
+					</li>
+					<li class="review-item">
+						<div class="review-pic"></div>
+						<div class="review-name">Lorem Ipsum</div>
+						<div class="review-text">"Proin malesuada egestas nunc tristique aliquet."</div>
+					</li>
+					<li class="review-item">
+						<div class="review-pic"></div>
+						<div class="review-name">Lorem Ipsum</div>
+						<div class="review-text">"Proin malesuada egestas nunc tristique aliquet."</div>
+					</li>
+					<li class="review-item">
+						<div class="review-pic"></div>
+						<div class="review-name">Lorem Ipsum</div>
+						<div class="review-text">"Proin malesuada egestas nunc tristique aliquet."</div>
+					</li>
+					<li class="review-item">
+						<div class="review-pic"></div>
+						<div class="review-name">Lorem Ipsum</div>
+						<div class="review-text">"Proin malesuada egestas nunc tristique aliquet."</div>
+					</li>
+					<li class="review-item">
+						<div class="review-pic"></div>
+						<div class="review-name">Lorem Ipsum</div>
+						<div class="review-text">"Proin malesuada egestas nunc tristique aliquet."</div>
+					</li>
+					<li class="review-item">
+						<div class="review-pic"></div>
+						<div class="review-name">Lorem Ipsum</div>
+						<div class="review-text">"Proin malesuada egestas nunc tristique aliquet."</div>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="content-wrap">
+		<div class="news">
+			<h2>News</h2>
+			<div class="news-list float-row">
+				<div class="col-1-3 news-item">
+					<div class="news-thumb"></div>
+					<div class="news-icon"><i class="fa fa-align-left"></i></div>
+					<div class="news-content">
+						<h2>This is Your Last<br>News</h2>
+						<p class="news-excerpt">Sed quis augue vitae diam condimentum mollis. Quisque bibendum, urna quis ornare accumsan, nisl justo placerat sem [...]</p>
+						<a href="#" class="more">read more</a>
+						<hr>
+						<div class="category">category:  something</div>
+						<div class="comments"><i class="fa fa-comment"></i> 125</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+				<div class="col-1-3 news-item">
+					<div class="news-thumb"></div>
+					<div class="news-icon"><i class="fa fa-align-left"></i></div>				
+					<div class="news-content">
+						<h2>This is Your Last<br>News</h2>
+						<p class="news-excerpt">Sed quis augue vitae diam condimentum mollis. Quisque bibendum, urna quis ornare accumsan, nisl justo placerat sem [...]</p>
+						<a href="#" class="more">read more</a>
+						<hr>
+						<div class="category">category:  something</div>
+						<div class="comments"><i class="fa fa-comment"></i> 125</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+				<div class="col-1-3 news-item">
+					<div class="news-thumb"></div>
+					<div class="news-icon"><i class="fa fa-align-left"></i></div>
+					<div class="news-content">
+						<h2>This is Your Last<br>News</h2>
+						<p class="news-excerpt">Sed quis augue vitae diam condimentum mollis. Quisque bibendum, urna quis ornare accumsan, nisl justo placerat sem [...]</p>
+						<a href="#" class="more">read more</a>
+						<hr>					
+						<div class="category">category:  something</div>
+						<div class="comments"><i class="fa fa-comment"></i> 125</div>
+						<div class="clear"></div>					
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>		
+	</div>
+	<footer>
+		<div class="bottom-arrow-wrap">
+			<img src="img/bottom-arrow.png" class="bottom-arrow" alt="bottom arrow"/>
+		</div>
+		<div class="footer-bg">
+			<div class="content-wrap">
+				<div class="about-prod float-row">
+					<div class="col-1-2">
+						<h2>About Open Cloud</h2>
+						<p>Vivamus non elementum enim. Vestibulum fringilla placerat vestibulum. Donec consequat scelerisque lorem, quis laoreet tortor dapibus nec. Duis sodales quis odio quis pretium. Etiam auctor sollicitudin enim. Duis tempus semper sodales.</p>
+						<div class="main-links">
+							<a href="#">About</a> /
+							<a href="#">Term of Services</a> /
+							<a href="#">Press</a> /
+							<a href="#">Staff</a> /
+							<a href="#">News</a>
+						</div>
+					</div>
+					<div class="col-1-2">
+						<h2>Products</h2>
+						<div class="prod-list">
+							<ul class="prod-list-1">
+								<li><i class="fa fa-chevron-right"></i> <a href="">Private cloud</a></li>
+								<li><i class="fa fa-chevron-right"></i> <a href="">Dedicated server</a></li>
+								<li><i class="fa fa-chevron-right"></i> <a href="">Hybrid cloud</a></li>
+								<li><i class="fa fa-chevron-right"></i> <a href="">Support</a></li>
+							</ul>
+							<ul class="prod-list-2">
+								<li><i class="fa fa-chevron-right"></i> <a href="">Dedicated hosting</a></li>
+								<li><i class="fa fa-chevron-right"></i> <a href="">Email hosting</a></li>
+								<li><i class="fa fa-chevron-right"></i> <a href="">Solutions</a></li>
+								<li><i class="fa fa-chevron-right"></i> <a href="">Knowledge center</a></li>
+							</ul>
+							<div class="clear"></div>
+						</div>
+						<form action="#" class="contact-form">
+							<input type="text" class="input-email" placeholder="youremail@clodie.com">
+							<button type="submit" class="btn btn-green bth-medium">Subscribe</button>
+							<div class="clear"></div>
+						</form>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bot-bg">
+			<div class="content-wrap">
+				<div class="copyright">Open cloud Copyright 2013 all rights reserved</div>
+				<div class="social">
+					<a href="" class="soc-circ"><i class="fa fa-twitter"></i></a>
+					<a href="" class="soc-circ"><i class="fa fa-facebook"></i></a>
+					<a href="" class="soc-circ"><i class="fa fa-google"></i></a>
+					<a href="" class="soc-circ"><i class="fa fa-rss"></i></a>
+					<a href="" class="soc-circ"><i class="fa fa-linkedin"></i></a>
+					<div class="clear"></div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
